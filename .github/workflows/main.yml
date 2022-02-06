@@ -10,6 +10,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
+    push: true
     runs-on: ubuntu-latest
     steps:
 
@@ -42,3 +43,9 @@ jobs:
         file: ./Dockerfile
         push: false
         tags: blair90/roberta:latest
+
+    - name: Authenticate to Dockerhub
+      uses: docker/login-action@v1
+      with:
+        username: ${{secrets.DOCKER_HUB_USERNAME}}
+        password: ${{secrets.DOCKER_HUB_ACCESS_TOKEN}}
