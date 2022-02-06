@@ -10,7 +10,6 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    push: true
     runs-on: ubuntu-latest
     steps:
 
