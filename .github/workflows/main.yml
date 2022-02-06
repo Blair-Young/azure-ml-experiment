@@ -26,6 +26,9 @@ jobs:
     - name: install az ml
       run: az extension add -n ml -y
 
+    - name: install az extension azure-cli-ml
+      run: az extension add -n azure-cli-ml
+
     - name: attach workspace
       run: az ml folder attach -w "blair-ml" -g "byhillsboro_rg_2380"
 
