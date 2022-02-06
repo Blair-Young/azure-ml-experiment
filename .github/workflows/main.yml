@@ -33,4 +33,4 @@ on:
           context: ./
           file: ./Dockerfile
           push: false
-          tags:blair90/roberta:latest
+          tags: blair90/roberta:latest
