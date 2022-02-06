@@ -23,8 +23,11 @@ jobs:
     - name: set auto-install of extensions
       run: az config set extension.use_dynamic_install=yes_without_prompt
 
+    - name: install az ml
+      run: az extension add -n ml -y
+
     - name: attach workspace
-      run: az ml folder attach -w "ml-ws" -g "practical-mlops"
+      run: az ml folder attach -w "blair-ml" -g "byhillsboro_rg_2380"
 
     - name: retreive the model
       run: az ml model download -t "." --model-id "roberta-sequence:1"
